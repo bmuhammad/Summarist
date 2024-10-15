@@ -2,6 +2,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import logo from "./assets/logo.png";
 import landing from "./assets/landing.png";
+import { AiFillAudio, AiFillBulb, AiFillFileText } from "react-icons/ai";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { BiCrown } from "react-icons/bi";
+import { RiLeafLine } from "react-icons/ri";
 
 export default function Home() {
   return (
@@ -27,22 +31,22 @@ export default function Home() {
               />
             </figure>
             <ul className={styles.nav__list_wrapper}>
-              <li className={styles.nav__list + ' ' + styles.nav__list_login}>
+              <li className={styles.nav__list + " " + styles.nav__list_login}>
                 Login
               </li>
-              <li className={styles.nav__list + ' ' + styles.nav__list_mobile}>
+              <li className={styles.nav__list + " " + styles.nav__list_mobile}>
                 About
               </li>
-              <li className={styles.nav__list + ' ' + styles.nav__list_mobile}>
+              <li className={styles.nav__list + " " + styles.nav__list_mobile}>
                 Contact
               </li>
-              <li className={styles.nav__list + ' ' + styles.nav__list_mobile}>
+              <li className={styles.nav__list + " " + styles.nav__list_mobile}>
                 Help
               </li>
             </ul>
           </div>
         </nav>
-        <section id="landing">
+        <section id={styles.landing}>
           <div className={styles.container}>
             <div className={styles.row}>
               <div className={styles.landing__wrapper}>
@@ -58,7 +62,7 @@ export default function Home() {
                     <br className={styles.remove_tablet} />
                     and even people who don’t like to read.
                   </div>
-                  <button className={styles.btn + ' ' + styles.home__cta_btn}>
+                  <button className={styles.btn + " " + styles.home__cta_btn}>
                     Login
                   </button>
                 </div>
@@ -76,7 +80,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="features">
+        <section id={styles.features}>
           <div className={styles.container}>
             <div className={styles.row}>
               <div className={styles.section__title}>
@@ -85,7 +89,7 @@ export default function Home() {
               <div className={styles.features__wrapper}>
                 <div className={styles.features}>
                   <div className={styles.features__icon}>
-                    {/* <AiFillFileText /> */}
+                    <AiFillFileText />
                   </div>
                   <div className={styles.features__title}>Read or listen</div>
                   <div className={styles.features__sub_title}>
@@ -93,14 +97,20 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.features}>
-                  <div className={styles.features__icon}>{/* <AiFillBulb /> */}</div>
-                  <div className={styles.features__title}>Find your next read</div>
+                  <div className={styles.features__icon}>
+                    <AiFillBulb />
+                  </div>
+                  <div className={styles.features__title}>
+                    Find your next read
+                  </div>
                   <div className={styles.features__sub_title}>
                     Explore book lists and personalized recommendations.
                   </div>
                 </div>
                 <div className={styles.features}>
-                  <div className={styles.features__icon}>{/* <AiFillAudio /> */}</div>
+                  <div className={styles.features__icon}>
+                    <AiFillAudio />
+                  </div>
                   <div className={styles.features__title}>Briefcasts</div>
                   <div className={styles.features__sub_title}>
                     Gain valuable insights from briefcasts
@@ -115,11 +125,15 @@ export default function Home() {
                   <div className={styles.statistics__heading}>
                     Achieve greater success
                   </div>
-                  <div className={styles.statistics__heading}>Improve your health</div>
+                  <div className={styles.statistics__heading}>
+                    Improve your health
+                  </div>
                   <div className={styles.statistics__heading}>
                     Develop better parenting skills
                   </div>
-                  <div className={styles.statistics__heading}>Increase happiness</div>
+                  <div className={styles.statistics__heading}>
+                    Increase happiness
+                  </div>
                   <div className={styles.statistics__heading}>
                     Be the best version of yourself!
                   </div>
@@ -148,7 +162,13 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.statistics__wrapper}>
-                <div className={styles.statistics__content_details + ' ' + styles.statistics__content_details_second}>
+                <div
+                  className={
+                    styles.statistics__content_details +
+                    " " +
+                    styles.statistics__content_details_second
+                  }
+                >
                   <div className={styles.statistics__data}>
                     <div className={styles.statistics__data_number}>91%</div>
                     <div className={styles.statistics__data_title}>
@@ -159,7 +179,7 @@ export default function Home() {
                   </div>
                   <div className={styles.statistics__data}>
                     <div className={styles.statistics__data_number}>94%</div>
-                    <div className={styles.statistics__datatitle}>
+                    <div className={styles.statistics__data_title}>
                       of Summarist members have <b>noticed an improvement</b> in
                       their overall comprehension and retention of information.
                     </div>
@@ -173,7 +193,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className={styles.statistics__content_header + ' ' + styles.statistics__content_header_second}>
+                <div
+                  className={
+                    styles.statistics__content_header +
+                    " " +
+                    styles.statistics__content_header_second
+                  }
+                >
                   <div className={styles.statistics__heading}>
                     Expand your learning
                   </div>
@@ -186,7 +212,9 @@ export default function Home() {
                   <div className={styles.statistics__heading}>
                     Become a better caregiver
                   </div>
-                  <div className={styles.statistics__heading}>Improve your mood</div>
+                  <div className={styles.statistics__heading}>
+                    Improve your mood
+                  </div>
                   <div className={styles.statistics__heading}>
                     Maximize your abilities
                   </div>
@@ -195,16 +223,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="reviews">
+        <section id={styles.reviews}>
           <div className={styles.row}>
             <div className={styles.container}>
               <div className={styles.section__title}> What our members say</div>
-                <div className={styles.reviews__wrapper}>
+              <div className={styles.reviews__wrapper}>
                 <div className={styles.review}>
                   <div className={styles.review__header}>
                     <div className={styles.review__name}>Hanna M.</div>
                     <div className={styles.review__stars}>
-                      {/* <BsStarFill /> */}</div>
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                    </div>
                   </div>
                   <div className={styles.review__body}>
                     This app has been a <b>game-changer</b> for me! It's saved
@@ -213,14 +246,20 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.review}>
-                <div className={styles.review__header}>
+                  <div className={styles.review__header}>
                     <div className={styles.review__name}>David B.</div>
-                    <div className={styles.review__stars}>{/* <BsStarFill /> */}</div>
+                    <div className={styles.review__stars}>
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                    </div>
                   </div>
                   <div className={styles.review__body}>
                     I love this app! It provides
-                    <b>concise and accurate summaries</b> of books in a way that
-                    is easy to understand. It's also very user-friendly and
+                    <b> concise and accurate summaries</b> of books in a way
+                    that is easy to understand. It's also very user-friendly and
                     intuitive.
                   </div>
                 </div>
@@ -228,35 +267,48 @@ export default function Home() {
                   <div className={styles.review__header}>
                     <div className={styles.review__name}>Nathan S.</div>
                     <div className={styles.review__stars}>
-                      {/* <BsStarFill /> */}</div>
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                    </div>
                   </div>
                   <div className={styles.review__body}>
                     This app is a great way to get the main takeaways from a
                     book without having to read the entire thing.
-                    <b>The summaries are well-written and informative.</b>
+                    <b> The summaries are well-written and informative. </b>
                     Definitely worth downloading.
                   </div>
                 </div>
                 <div className={styles.review}>
                   <div className={styles.review__header}>
                     <div className={styles.review__name}>Ryan R.</div>
-                    <div className={styles.review__stars}>{/* <BsStarFill /> */}</div>
+                    <div className={styles.review__stars}>
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                      <BsStarFill />
+                    </div>
                   </div>
                   <div className={styles.review__body}>
                     If you're a busy person who
-                    <b>loves reading but doesn't have the time</b> to read every
-                    book in full, this app is for you! The summaries are
+                    <b> loves reading but doesn't have the time</b> to read
+                    every book in full, this app is for you! The summaries are
                     thorough and provide a great overview of the book's content.
                   </div>
                 </div>
               </div>
               <div className={styles.reviews__btn_wrapper}>
-                <button className={styles.btn + ' ' + styles.home__cta_btn}>Login</button>
+                <button className={styles.btn + " " + styles.home__cta_btn}>
+                  Login
+                </button>
               </div>
             </div>
           </div>
         </section>
-        <section id="numbers">
+        <section id={styles.numbers}>
           <div className={styles.container}>
             <div className={styles.row}>
               <div className={styles.section__title}>
@@ -264,16 +316,25 @@ export default function Home() {
               </div>
               <div className={styles.numbers__wrapper}>
                 <div className={styles.numbers}>
-                  <div className={styles.numbers__icon}>{/* <BiCrown /> */}</div>
+                  <div className={styles.numbers__icon}>
+                    <BiCrown />
+                  </div>
                   <div className={styles.numbers__title}>3 Million</div>
                   <div className={styles.numbers__sub_title}>
                     Downloads on all platforms
                   </div>
                 </div>
                 <div className={styles.numbers}>
-                  <div className={styles.numbers__icon + ' ' + styles.numbers__star_icon}>
-                    {/* <BsStarFill />
-                  <BsStarHalf /> */}
+                  <div
+                    className={
+                      styles.numbers__icon + " " + styles.numbers__star_icon
+                    }
+                  >
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
                   </div>
                   <div className={styles.numbers__title}>4.5 Stars</div>
                   <div className={styles.numbers__sub_title}>
@@ -281,7 +342,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.numbers}>
-                  <div className={styles.numbers__icon}>{/* <RiLeafLine /> */}</div>
+                  <div className={styles.numbers__icon}>
+                    <RiLeafLine />
+                  </div>
                   <div className={styles.numbers__title}>97%</div>
                   <div className={styles.numbers__sub_title}>
                     Of Summarist members create a better reading habit
@@ -291,7 +354,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="footer">
+        <section id={styles.footer}>
           <div className={styles.container}>
             <div className={styles.row}>
               <div className={styles.footer__top_wrapper}>
@@ -325,7 +388,9 @@ export default function Home() {
                       <a className={styles.footer__link}>Gift Cards</a>
                     </div>
                     <div className={styles.footer__link_wrapper}>
-                      <a className={styles.footer__link}>Authors & Publishers</a>
+                      <a className={styles.footer__link}>
+                        Authors & Publishers
+                      </a>
                     </div>
                   </div>
                 </div>

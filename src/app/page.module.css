@@ -201,7 +201,7 @@
   justify-content: center;
 }
 
-.statistics__content_header-second {
+.statistics__content_header_second {
   align-items: flex-end;
 }
 
@@ -448,11 +448,11 @@
     grid-template-columns: 1fr;
   }
 
-  .statistics__content_details-second {
+  .statistics__content_details_second {
     order: 1;
   }
 
-  .statistics__content_header-second {
+  .statistics__content_header_second {
     align-items: flex-start;
   }
 

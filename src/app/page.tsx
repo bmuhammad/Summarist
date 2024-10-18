@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import logo from "./assets/logo.png";
@@ -6,8 +8,19 @@ import { AiFillAudio, AiFillBulb, AiFillFileText } from "react-icons/ai";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { BiCrown } from "react-icons/bi";
 import { RiLeafLine } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % 6);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -119,22 +132,70 @@ export default function Home() {
               </div>
               <div className={styles.statistics__wrapper}>
                 <div className={styles.statistics__content_header}>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 0
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Enhance your knowledge
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 1
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Achieve greater success
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 2
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Improve your health
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 3
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Develop better parenting skills
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 4
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Increase happiness
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 5
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Be the best version of yourself!
                   </div>
                 </div>
@@ -200,22 +261,70 @@ export default function Home() {
                     styles.statistics__content_header_second
                   }
                 >
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 0
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Expand your learning
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 1
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Accomplish your goals
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 2
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Strengthen your vitality
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 3
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Become a better caregiver
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 4
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Improve your mood
                   </div>
-                  <div className={styles.statistics__heading}>
+                  <div
+                    className={
+                      activeIndex === 5
+                        ? styles.statistics__heading +
+                          " " +
+                          styles.statistics__heading_active
+                        : styles.statistics__heading
+                    }
+                  >
                     Maximize your abilities
                   </div>
                 </div>

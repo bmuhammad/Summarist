@@ -9,8 +9,13 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { BiCrown } from "react-icons/bi";
 import { RiLeafLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
+import LoginModal from "../components/modals/LoginModal"
+import { Provider } from "react-redux";
+import { store } from  '../redux/store'
 
 export default function Home() {
+
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -22,6 +27,7 @@ export default function Home() {
   }, []);
 
   return (
+    <Provider store={store}>
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
@@ -75,9 +81,11 @@ export default function Home() {
                     <br className={styles.remove_tablet} />
                     and even people who don’t like to read.
                   </div>
-                  <button className={styles.btn + " " + styles.home__cta_btn}>
-                    Login
-                  </button>
+                  {/* <button className={styles.btn + " " + styles.home__cta_btn}
+           >
+        Login before modal
+      </button> */}
+                   <LoginModal /> 
                 </div>
                 <figure className={styles.landing__image_mask}>
                   <Image
@@ -548,5 +556,6 @@ export default function Home() {
         </section>
       </body>
     </html>
+    </Provider>
   );
 }
